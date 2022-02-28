@@ -16,15 +16,11 @@ public class Main {
         System.out.println(m3.attack() + m3.name); // Run StoneMonster's attack()
 
          // m1 dies, generate a new instance and re-asign to m1.
-        m1 = new StoneMonster("a2b2");
+        m1 = new StoneMonster("new stone");
         System.out.println(m1.attack() + m1.name);
 
         // We have a problem here!!!
-        Monster m4 = new Monster("u2u2") {
-            public String attack() {
-                return "!^_&^$@+%$* I don't know how to attack!";
-            }
-        };
+        Monster m4 = new Monster("air");
         System.out.println(m4.attack() + m4.name); // garbage!!!
     } // main
 } // class

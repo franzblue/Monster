@@ -16,7 +16,7 @@ public class StoneMonster extends Monster {
     // methods
     @Override
     public String attack() {
-        return "Attack with stone!";
+        return "Attack with stone! ";
     }
 
     // getters setters

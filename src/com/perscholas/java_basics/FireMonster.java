@@ -16,7 +16,7 @@ public class FireMonster extends Monster {
     // methods
     @Override
     public String attack() {
-        return "Attack with fire!";
+        return "Attack with fire! ";
     }
 
     // getters setters

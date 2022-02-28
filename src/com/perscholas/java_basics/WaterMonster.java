@@ -17,7 +17,7 @@ public class WaterMonster extends Monster {
     // methods
     @Override
     public String attack() {
-        return "Attack with water!";
+        return "Attack with water! ";
     }
 
     // getters setters

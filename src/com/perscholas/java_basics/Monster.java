@@ -1,6 +1,6 @@
 package com.perscholas.java_basics;
 
-public abstract class Monster {
+public class Monster {
     // fields
     public String name;
 
@@ -10,6 +10,8 @@ public abstract class Monster {
     }
 
     // methods
-    public abstract String attack();
+    public String attack() {
+        return "!^_&^$@+%$* I don't know how to attack! ";
+    }
     // getters setters
 }
