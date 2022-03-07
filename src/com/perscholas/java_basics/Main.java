@@ -22,5 +22,23 @@ public class Main {
         // We have a problem here!!!
         Monster m4 = new Monster("air");
         System.out.println(m4.attack() + m4.name); // garbage!!!
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/classicmodels?user=root&password=root");
+            String SelectSQL = "SELECT * FROM employees";
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery(SelectSQL);
+            while(result.next()) {
+                String name = result.getString("firstName");
+                String email = result.getString("email");
+                System.out.println(name + " | " + email);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
     } // main
 } // class
